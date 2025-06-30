@@ -78,7 +78,7 @@ customers(year INT, quarter INT, new_customers INT)
 """
 
 def sql_agent(state: State):
-    question = state["messages"][-1].content
+    user_question = state["messages"][-1].content
 
     llm_with_tool = llm.bind_tools([run_sql_tool])
 
